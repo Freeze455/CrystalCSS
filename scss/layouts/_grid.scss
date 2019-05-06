@@ -1,0 +1,22 @@
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .col {
+        @for $i from 1 through 12 {
+            &.s#{$i} {
+                grid-column: span $i;
+            }
+            @include responsive(md, lg) {
+                &.m#{$i} {
+                    grid-column: span $i;
+                }
+            }
+            @include responsive(lg) {
+                &.l#{$i} {
+                    grid-column: span $i !important;
+                }
+            }
+        }
+    }
+}

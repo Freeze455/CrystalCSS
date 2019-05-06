@@ -1,0 +1,10 @@
+.container {
+    max-width: 80%;
+    width: 80%;
+    margin: auto;
+
+    &.fluid {
+        max-width: 100%;
+        width: 100%;
+    }
+}

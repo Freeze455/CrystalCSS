@@ -1,0 +1,55 @@
+// Font-family properties
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+html {
+    overflow-x: hidden;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    body {
+        font-family: "Roboto", sans-serif, Verdana, sans-serif;
+        @include Font-weight(light);
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 0;
+        font-weight: inherit;
+    }
+}
+
+@each $name, $modifier in $size-modifier {
+    @include responsive(sm) {
+        #{$name},
+        .#{$name} {
+            @include hxFont($font-size-base / 2, $modifier);
+        }
+    }
+
+    @include responsive(md) {
+        #{$name},
+        .#{$name} {
+            @include hxFont($font-size-base, $modifier, light);
+        }
+    }
+}
+
+hr {
+    margin: 1.5rem 0 !important;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@each $name, $colors in $colors-map {
+    .bg-#{$name} {
+        background-color: nth($colors, 1);
+        color: nth($colors, 2);
+    }
+    .text-#{$name} {
+        color: nth($colors, 1);
+    }
+}

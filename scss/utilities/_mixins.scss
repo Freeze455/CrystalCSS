@@ -1,0 +1,22 @@
+@mixin responsive($breakpoint-min, $breakpoint-max: null) {
+    @if ($breakpoint-max) {
+        @if map-has-key($breakpoints, $breakpoint-min) and
+            map-has-key($breakpoints, $breakpoint-max)
+        {
+            $breakpoint-min-value: map-get($breakpoints, $breakpoint-min);
+            $breakpoint-max-value: map-get($breakpoints, $breakpoint-max);
+
+            @media (min-width: $breakpoint-min-value) and (max-width: $breakpoint-max-value -1px) {
+                @content;
+            }
+        }
+    } @else {
+        @if map-has-key($breakpoints, $breakpoint-min) {
+            $breakpoint-min-value: map-get($breakpoints, $breakpoint-min);
+
+            @media (min-width: $breakpoint-min-value) {
+                @content;
+            }
+        }
+    }
+}
