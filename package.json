@@ -1,0 +1,39 @@
+{
+    "bugs": {
+        "email": "",
+        "url": "https://github.com/Freeze455/CrystalCSS/issues"
+    },
+    "contributors": [
+        "Julien-Broyard <broyard.dev@gmail.com>"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "husky": "^2.2.0",
+        "prettier": "^1.17.0",
+        "tslint": "^5.16.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.4.5"
+    },
+    "homepage": "https://github.com/Freeze455/CrystalCSS#readme",
+    "name": "crystalcss",
+    "version": "1.0.0",
+    "description": "Whether for your small or big projects, this framework will bring you the solutions adapted to your needs",
+    "main": "dist/index.js",
+    "scripts": {
+        "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
+        "pre-commit": "yarn tslint && yarn prettier",
+        "tslint": "tslint --project tsconfig.json --fix"
+    },
+    "author": {
+        "email": "",
+        "name": "",
+        "url": ""
+    },
+    "license": "MIT",
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn pre-commit"
+        }
+    },
+    "types": ""
+}
