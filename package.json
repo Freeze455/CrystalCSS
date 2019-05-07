@@ -1,6 +1,5 @@
 {
     "bugs": {
-        "email": "",
         "url": "https://github.com/Freeze455/CrystalCSS/issues"
     },
     "contributors": [
@@ -25,9 +24,9 @@
         "tslint": "tslint --project tsconfig.json --fix"
     },
     "author": {
-        "email": "",
-        "name": "",
-        "url": ""
+        "email": "freezeminecraftandgaming@gmail.com",
+        "name": "Freeze",
+        "url": "https://github.com/Freeze455"
     },
     "license": "MIT",
     "husky": {
