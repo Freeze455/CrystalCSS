@@ -20,3 +20,12 @@
         }
     }
 }
+
+@mixin hxFont ($originSize, $modifier: 1, $font-weight: light) {
+    font-size: (($originSize) * $modifier);
+    @include Font-weight($font-weight)
+}
+
+@mixin Font-weight ($weight) {
+    font-weight: map-get($weight-map, $weight)
+}

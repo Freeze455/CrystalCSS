@@ -1,0 +1,35 @@
+@each $name, $colors in $colors-map {
+
+    .btn {
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: .5px;
+        transition: background-color .3s ease-out;
+        cursor: pointer;
+        display: inline-block;
+        transition: map-get($transitions-map, 'button') !important;
+
+        outline: none;
+        border: none;
+
+        padding: 8px 20px;
+        margin: 10px;
+
+        color: inherit;
+        background-color: inherit;
+        white-space: nowrap;
+
+        @each $name, $colors in $colors-map {
+            &.bg-#{$name} {
+                background-color: nth($colors, 1);
+                color: white;
+            }
+            &.bg-#{$name}:hover {
+                background-color: darken(nth($colors, 1), 10);
+                color: white;
+            }
+        }
+
+    }
+
+}
