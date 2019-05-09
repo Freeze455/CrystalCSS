@@ -46,10 +46,10 @@ hr {
 
 @each $name, $colors in $colors-map {
     .bg-#{$name} {
-        background-color: nth($colors, 1);
-        color: nth($colors, 2);
+        background-color: nth($colors, 1) !important;
+        color: nth($colors, 2) !important;
     }
     .text-#{$name} {
-        color: nth($colors, 1);
+        color: nth($colors, 1) !important;
     }
 }

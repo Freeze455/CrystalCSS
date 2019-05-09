@@ -1,0 +1,17 @@
+span.badge {
+    min-width: 3rem;
+    padding: 0 6px;
+    margin-left: 4px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    height: 22px;
+    color: nth(map-get($colors-map, 'blue-3'), 2);
+    background-color: nth(map-get($colors-map, 'blue-2'), 1);
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    &.align-right {
+        float: right;
+    }
+}

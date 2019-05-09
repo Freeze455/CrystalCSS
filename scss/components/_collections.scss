@@ -1,0 +1,26 @@
+.collection {
+    display: table;
+    background: white;
+    margin: .5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+
+    .item {
+        line-height: 1.5rem;
+        padding: 10px 20px;
+        margin: 0;
+        border-bottom: 1px solid #e0e0e0;
+        border-collapse: collapse;
+        display: block;   
+    }
+
+    &.even .item:nth-child(even) {
+        background-color: nth(map-get($colors-map, 'light-grey-1'), 1)
+    }
+
+    &.odd .item:nth-child(odd) {
+        background-color: nth(map-get($colors-map, 'light-grey-1'), 1)
+    }
+}
