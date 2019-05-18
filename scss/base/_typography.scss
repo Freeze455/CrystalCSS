@@ -48,6 +48,10 @@ hr {
     .bg-#{$name} {
         background-color: nth($colors, 1) !important;
         color: nth($colors, 2) !important;
+
+        &:hover {
+            background-color: darken(nth($colors, 1), 5%) !important;
+        }
     }
     .text-#{$name} {
         color: nth($colors, 1) !important;

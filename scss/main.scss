@@ -3,15 +3,16 @@
 @import 'utilities/mixins';
 @import 'utilities/functions';
 @import 'utilities/icons';
-
 @import 'base/reset';
 @import 'base/typography';
-
 @import 'layouts/grid';
 @import 'layouts/layout';
 
 // Components
+@import 'components/animations';
 @import 'components/breadcrumb';
 @import 'components/buttons';
 @import 'components/collections';
 @import 'components/badges';
+@import 'components/gallery';
+@import 'components/notifications';

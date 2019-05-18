@@ -5,7 +5,9 @@
     "contributors": [
         "Julien-Broyard <broyard.dev@gmail.com>"
     ],
-    "dependencies": {},
+    "dependencies": {
+        "@types/node": "^12.0.2"
+    },
     "devDependencies": {
         "husky": "^2.2.0",
         "prettier": "^1.17.0",
@@ -22,7 +24,9 @@
         "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
         "pre-commit": "yarn tslint && yarn prettier",
         "tslint": "tslint --project tsconfig.json --fix",
-        "sass": "sass --watch scss/main.scss build/crystal.css"
+        "sass": "sass --watch scss/main.scss build/crystal.css",
+
+        "tsc": "tsc ./ts/components/main.ts --watch"
     },
     "author": {
         "email": "freezeminecraftandgaming@gmail.com",
