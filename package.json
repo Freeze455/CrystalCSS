@@ -26,7 +26,7 @@
         "tslint": "tslint --project tsconfig.json --fix",
         "sass": "sass --watch scss/main.scss build/crystal.css",
 
-        "tsc": "tsc ./ts/components/main.ts --watch"
+        "tsc": "tsc ./ts/components/notify.ts --target es6 --watch"
     },
     "author": {
         "email": "freezeminecraftandgaming@gmail.com",

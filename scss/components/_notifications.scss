@@ -1,20 +1,39 @@
 .notify {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
+    visibility: hidden; // Hidden by default. Visible on click
+    min-width: 250px; // Set a default minimum width
+    margin-left: -125px; // Divide value of min-width by 2
+    background-color: #333; // Black background color
+    color: #fff; // White text color
+    text-align: center; // Centered text
+    border-radius: 2px; // Rounded borders
+    padding: 16px; // Padding
+    position: fixed; // Sit on top of the screen
+    z-index: 1; // Add a z-index if needed
+    left: 50%; // Center the snackbar
+    bottom: 30px; // 30px from the bottom
+    
 
     &.show {
-        visibility: visible; /* Show the snackbar */
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        visibility: visible; // Show the snackbar
+        @include fade(0.5s, 2.5s);
+    }
+
+    &.succes {
+        border-left: 6px solid nth(map-get($colors-map, 'green-3'), 1);
+        background-color: lighten(nth(map-get($colors-map, 'green-3'), 1), 40%);
+        color: nth(map-get($colors-map, 'green-3'), 1);
+        font-weight: 400;
+    }
+    &.warn {
+        border-left: 6px solid nth(map-get($colors-map, 'orange'), 1);
+        background-color: lighten(nth(map-get($colors-map, 'orange'), 1), 30%);
+        color: nth(map-get($colors-map, 'orange'), 1);
+        font-weight: 400;
+    }
+    &.danger {
+        border-left: 6px solid nth(map-get($colors-map, 'red'), 1);
+        background-color: lighten(nth(map-get($colors-map, 'red'), 1), 30%);
+        color: nth(map-get($colors-map, 'red'), 1);
+        font-weight: 400;
     }
 }

@@ -21,11 +21,19 @@
     }
 }
 
-@mixin hxFont ($originSize, $modifier: 1, $font-weight: light) {
-    font-size: (($originSize) * $modifier);
-    @include Font-weight($font-weight)
+@mixin fade ($transition-duration: 0.5s, $duration: 2.5s) {
+    -webkit-animation: fadein $transition-duration, fadeout $transition-duration $duration;
+    animation: fadein $transition-duration, fadeout $transition-duration $duration;
 }
 
-@mixin Font-weight ($weight) {
+@mixin font-size ($originSize, $modifier: 1) {
+    font-size: $originSize * $modifier;
+}
+
+@mixin font-weight ($weight) {
     font-weight: map-get($weight-map, $weight)
+}
+
+@mixin font-family {
+    font-family: "Roboto", sans-serif, Verdana;
 }

@@ -7,8 +7,8 @@ html {
     scroll-behavior: smooth;
 
     body {
-        font-family: "Roboto", sans-serif, Verdana, sans-serif;
-        @include Font-weight(light);
+        @include font-family;
+        @include font-weight(light);
         font-size: 15px;
         line-height: 1.5;
         margin: 0;
@@ -18,7 +18,7 @@ html {
 @for $i from 1 through 6 {
     h#{$i} {
         margin: 0;
-        font-weight: inherit;
+        @include font-weight(inherit)
     }
 }
 
@@ -26,14 +26,15 @@ html {
     @include responsive(sm) {
         #{$name},
         .#{$name} {
-            @include hxFont($font-size-base / 2, $modifier);
+            @include font-size($font-size-base / 2, $modifier);
         }
     }
 
     @include responsive(md) {
         #{$name},
         .#{$name} {
-            @include hxFont($font-size-base, $modifier, light);
+            @include font-size($font-size-base, $modifier);
+            @include font-weight(light)
         }
     }
 }
